@@ -16,13 +16,17 @@ const usuarioSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    tipo_usuario: {
+        type: String,
+        required: true,
+    },
     fecha_inicio: {
         type: Date,
         required: false,
     },
     codigo: {
-        type: integer,
+        type: Number,
         require: true
     },
 });
-module.exports = mongoose.model("Animal", animalSchema);
+module.exports = mongoose.model("usuario", usuarioSchema);
